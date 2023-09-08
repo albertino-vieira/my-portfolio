@@ -1,34 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import NavBar from './components/NavBar'
+import HeroSection from './components/HeroSection'
+import AboutSection from './components/AboutSection'
+import ProjectsSection from './components/ProjectSection'
+import EmailSection from './components/EmailSection'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <NavBar/>
+    <div className="container mt-24 mx-auto py-4 px-12">
+      <HeroSection />
+      <AboutSection/>
+      <ProjectsSection/>
+      <EmailSection/>
+    </div>
+    <Footer />
+  </main>
   )
 }
 
