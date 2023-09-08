@@ -41,7 +41,7 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-5 px-4 xl:gap-16 sm:py-16 xl:pr-16">
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-5 px-4 xl:gap-16 sm:py-16 ">
         <img
           className="rounded-3xl"
           alt="working"
