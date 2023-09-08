@@ -1,6 +1,6 @@
 import { useState, useTransition } from "react";
 import TabButton from "./TabButton";
-import Working from "../assets/working.png"
+import Working from "../assets/working.png";
 
 const TAB_DATA = [
   {
@@ -41,22 +41,33 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-5 px-4 xl:gap-16 sm:py-16 xl:pr-16">
         <img
+          className="rounded-3xl"
           alt="working"
           src={Working}
-          width={500}
-          height={500}
+          width={550}
+          height={600}
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            I am a Full Stack Developer with 5 years of experience in
+            software engineering and development. My expertise lies in
+            designing, developing, and troubleshooting high-performance web
+            applications. I excel in problem-solving and debugging software, and
+            I have a knack for crafting technical solutions from the ground up.
+            My technology stack includes: React: Proficient in building
+            interactive and user-friendly web interfaces. TypeScript: Skilled in
+            using TypeScript to enhance code quality and robustness. React
+            Native: Experienced in developing cross-platform mobile applications
+            for both iOS and Android. Node.js: Well-versed in building scalable
+            server-side solutions for efficient backend development. With this
+            diverse skill set, I am well-prepared to tackle the entire software
+            development process, from creating responsive web applications to
+            crafting mobile solutions and scalable backend systems. My 5 years
+            of experience have equipped me to deliver high-quality software
+            efficiently and effectively.
           </p>
           <div className="flex flex-row justify-start mt-8">
             {TAB_DATA.map((t) => (
