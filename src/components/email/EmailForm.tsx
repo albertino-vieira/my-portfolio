@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { ButtonHTMLAttributes, useState } from "react";
+import { useState } from "react";
 
 interface ContactState {
   subject: string;
