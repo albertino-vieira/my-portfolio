@@ -1,6 +1,6 @@
 import { useState, useTransition } from "react";
 import TabButton from "../TabButton";
-import Working from "../assets/working.png";
+import Working from "../../assets/workingcom.png";
 
 const TAB_DATA = [
   {
