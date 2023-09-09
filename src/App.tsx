@@ -1,9 +1,9 @@
 import NavBar from './components/NavBar'
-import HeroSection from './components/HeroSection'
-import AboutSection from './components/AboutSection'
+import HeroSection from './components/hero/HeroSection'
+import AboutSection from './components/about/AboutSection'
 import ProjectsSection from './components/ProjectSection'
-import EmailSection from './components/EmailSection'
-import Footer from './components/Footer'
+import EmailSection from './components/email/EmailSection'
+import Footer from './components/footer/Footer'
 
 function App() {
 

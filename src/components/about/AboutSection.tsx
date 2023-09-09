@@ -1,5 +1,5 @@
 import { useState, useTransition } from "react";
-import TabButton from "./TabButton";
+import TabButton from "../TabButton";
 import Working from "../assets/working.png";
 
 const TAB_DATA = [

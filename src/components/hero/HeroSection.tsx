@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import AV from "../assets/av.png";
+import AV from "../../assets/avcompressed.png";
 
 const HeroSection = () => {
   return (
