@@ -21,13 +21,11 @@ const EmailForm = () => {
   ) => {
     const { name, value } = e.target;
     setContactState({ ...contactState, [name]: value });
-    console.log(name, value );
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const { subject, email, message } = contactState;
-    console.log(subject, email, message);
     if (subject !== "" && email !== "" && message !== "") {
       emailjs
         .send(

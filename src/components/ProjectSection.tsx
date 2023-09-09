@@ -8,7 +8,7 @@ const projectsData = [
     id: 1,
     title: "Coming Soon",
     description: "Project coming soon",
-    image: "../../public/under-construction.jpg",
+    image: "../../under-construction.jpg",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
