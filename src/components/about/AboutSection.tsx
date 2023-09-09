@@ -52,16 +52,16 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a Full Stack Developer with 5 years of experience in
-            software engineering and development. My expertise lies in
-            designing, developing, and troubleshooting high-performance web
-            applications. I excel in problem-solving and debugging software, and
-            I have a knack for crafting technical solutions from the ground up.
-            My technology stack includes: React: Proficient in building
-            interactive and user-friendly web interfaces. TypeScript: Skilled in
-            using TypeScript to enhance code quality and robustness. React
-            Native: Experienced in developing cross-platform mobile applications
-            for both iOS and Android. Node.js: Well-versed in building scalable
+            I am a Full Stack Developer with 5 years of experience in software
+            engineering and development. My expertise lies in designing,
+            developing, and troubleshooting high-performance web applications. I
+            excel in problem-solving and debugging software, and I have a knack
+            for crafting technical solutions from the ground up. My technology
+            stack includes: React: Proficient in building interactive and
+            user-friendly web interfaces. TypeScript: Skilled in using
+            TypeScript to enhance code quality and robustness. React Native:
+            Experienced in developing cross-platform mobile applications for
+            both iOS and Android. Node.js: Well-versed in building scalable
             server-side solutions for efficient backend development. With this
             diverse skill set, I am well-prepared to tackle the entire software
             development process, from creating responsive web applications to
@@ -72,6 +72,7 @@ const AboutSection = () => {
           <div className="flex flex-row justify-start mt-8">
             {TAB_DATA.map((t) => (
               <TabButton
+                key={t.id}
                 handleSelectTab={() => handleTabChange(t.id)}
                 active={tab === t.id}
               >

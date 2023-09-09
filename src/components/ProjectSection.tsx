@@ -6,6 +6,15 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
+    title: "Coming Soon",
+    description: "Project coming soon",
+    image: "../../public/under-construction.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  /*{
+    id: 1,
     title: "React Portfolio Website",
     description: "Project 1 description",
     image: "/images/projects/1.png",
@@ -57,7 +66,7 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
-  },
+  },*/
 ];
 
 const ProjectsSection = () => {
