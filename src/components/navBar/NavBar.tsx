@@ -1,8 +1,8 @@
-import NavLink from "./NavLink";
+import NavLink from "../navLink/NavLink";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import MenuOverlay from "./MenuOverlay";
-import Logo from "../assets/logo.png";
+import Logo from "../../assets/logo.png";
 
 const navLinks = [
   {

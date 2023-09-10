@@ -1,4 +1,4 @@
-import NavLink from "./NavLink";
+import NavLink from "../navLink/NavLink";
 
 interface MenuOverlayProps {
   links: Array<{ href: string; title: string }>;

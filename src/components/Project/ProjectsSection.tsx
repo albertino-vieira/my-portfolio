@@ -3,6 +3,8 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
+const Tags = ["All", "Web", "Mobile"];
+
 const projectsData = [
   {
     id: 1,
@@ -71,6 +73,7 @@ const projectsData = [
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -93,21 +96,14 @@ const ProjectsSection = () => {
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
-        />
+        {Tags.map((element) => (
+          <ProjectTag
+            key={element}
+            onClick={handleTagChange}
+            name={element}
+            isSelected={tag === element}
+          />
+        ))}
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (

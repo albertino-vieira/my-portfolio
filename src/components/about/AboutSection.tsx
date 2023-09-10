@@ -1,5 +1,5 @@
 import { useState, useTransition } from "react";
-import TabButton from "../TabButton";
+import TabButton from "./TabButton";
 import Working from "../../assets/workingcom.png";
 
 const TAB_DATA = [
@@ -31,7 +31,7 @@ const TAB_DATA = [
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
-  const [_, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const handleTabChange = (id: string) => {
     startTransition(() => {
