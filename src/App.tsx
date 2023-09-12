@@ -4,6 +4,7 @@ import AboutSection from './components/about/AboutSection'
 import ProjectsSection from './components/Project/ProjectsSection'
 import EmailSection from './components/email/EmailSection'
 import Footer from './components/footer/Footer'
+import CareerSection from './components/carreer/CareerSection'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <div className="container mt-24 mx-auto py-4 px-12">
       <HeroSection />
       <AboutSection/>
+      <CareerSection/>
       <ProjectsSection/>
       <EmailSection/>
     </div>

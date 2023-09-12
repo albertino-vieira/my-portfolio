@@ -10,6 +10,10 @@ const navLinks = [
     title: "About",
   },
   {
+    href: "#career",
+    title: "Career",
+  },
+  {
     href: "#projects",
     title: "Projects",
   },
@@ -17,6 +21,7 @@ const navLinks = [
     href: "#contact",
     title: "Contact",
   },
+
 ];
 
 const NavBar = () => {

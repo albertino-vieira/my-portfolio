@@ -6,6 +6,7 @@ const config: Config = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     extend: {
@@ -21,6 +22,6 @@ const config: Config = {
       secondary: colors.blue,
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 }
 export default config
