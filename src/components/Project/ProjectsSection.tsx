@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
-
+import under from "../../assets/under-construction.jpg";
 const Tags = ["All", "Web", "Mobile"];
 
 const projectsData = [
@@ -10,7 +10,7 @@ const projectsData = [
     id: 1,
     title: "Coming Soon",
     description: "Project coming soon",
-    image: "../../under-construction.jpg",
+    image: under,
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
