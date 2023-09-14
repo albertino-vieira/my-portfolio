@@ -29,7 +29,7 @@ describe('JobDetail', () => {
     
     // Assert
     const jobTitleElement = screen.getByText(jobTitle);
-    expect(jobTitleElement).toHaveClass('text-gradient');
+    expect(jobTitleElement).toHaveClass('bg-gradient-to-r');
   });
 
   it('renders each bullet as a list item', () => {
