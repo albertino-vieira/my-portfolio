@@ -40,7 +40,7 @@ const CareerSection = () => {
     <section id="career">
       <h2 className="text-4xl font-bold text-white mb-4">Career</h2>{" "}
       <Carousel
-        className="h-[500px] rounded-full w-full  text-white"
+        className="h-[500px] rounded-full w-full px-2 text-white"
         slideInterval={5000}
       >
         {JobDetails.map((job) => (
