@@ -3,11 +3,21 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 import under from "../../assets/under-construction.jpg";
+import Dashboard from "../../assets/dashboard.png";
 const Tags = ["All", "Web", "Mobile"];
 
 const projectsData = [
   {
     id: 1,
+    title: "Nextjs Dashbpard",
+    description: "Next js basic dashboard example",
+    image: Dashboard,
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/albertino-vieira/nextjs-dashboard",
+    previewUrl: "https://nextjs-dashboard-lyart-pi-47.vercel.app/"
+  },
+  {
+    id: 2,
     title: "Coming Soon",
     description: "Project coming soon",
     image: under,
@@ -15,15 +25,7 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "/",
   },
-  /*{
-    id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+  /*
   {
     id: 2,
     title: "Potography Portfolio Website",
