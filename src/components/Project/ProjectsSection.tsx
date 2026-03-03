@@ -1,123 +1,75 @@
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
-import under from "../../assets/under-construction.jpg";
 import Dashboard from "../../assets/dashboard.png";
+import under from "../../assets/under-construction.jpg";
+import portfolio from "../../assets/working.png";
+
 const Tags = ["All", "Web", "Mobile"];
 
 const projectsData = [
   {
     id: 1,
-    title: "Nextjs Dashbpard",
-    description: "Next js basic dashboard example",
+    title: "Next.js Dashboard",
+    description: "Interactive dashboard with authentication, analytics, and modern UI patterns.",
     image: Dashboard,
     tag: ["All", "Web"],
     gitUrl: "https://github.com/albertino-vieira/nextjs-dashboard",
-    previewUrl: "https://nextjs-dashboard-lyart-pi-47.vercel.app/"
+    previewUrl: "https://nextjs-dashboard-lyart-pi-47.vercel.app/",
   },
   {
     id: 2,
-    title: "Coming Soon",
-    description: "Project coming soon",
-    image: under,
+    title: "Personal Portfolio",
+    description: "SEO-focused portfolio showcasing experience, projects, and contact workflow.",
+    image: portfolio,
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  /*
-  {
-    id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/albertino-vieira",
+    previewUrl: "#home",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
+    title: "Mobile Product Work",
+    description: "React Native delivery work with performance improvements and regular feature releases.",
+    image: under,
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/albertino-vieira",
+    previewUrl: "#contact",
   },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },*/
 ];
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const handleTagChange = (newTag: string) => {
-    setTag(newTag);
-  };
-
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
-
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  };
+  const filteredProjects = projectsData.filter((project) => project.tag.includes(tag));
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+    <section id="projects" className="py-16" aria-label="Featured projects">
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-4">Featured Projects</h2>
+      <p className="text-center text-[#ADB7BE] max-w-2xl mx-auto mb-8">
+        Selected work across web and mobile products, focused on scalability, UX, and measurable impact.
+      </p>
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-3">
         {Tags.map((element) => (
           <ProjectTag
             key={element}
-            onClick={handleTagChange}
+            onClick={setTag}
             name={element}
             isSelected={tag === element}
           />
         ))}
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-10 mt-6">
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
+            key={project.id}
+            initial={{ y: 30, opacity: 0 }}
+            animate={isInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
+            transition={{ duration: 0.35, delay: index * 0.15 }}
           >
             <ProjectCard
-              key={project.id}
               title={project.title}
               description={project.description}
               imgUrl={project.image}
