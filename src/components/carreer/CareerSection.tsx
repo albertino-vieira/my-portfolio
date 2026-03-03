@@ -1,54 +1,63 @@
-import { Carousel } from "flowbite-react";
-import JobDetail from "./JobDetail";
-
-const JobDetails = [
+const jobDetails = [
   {
-    jobTitle:
-      "Fullstack Developer at RuntimeRevolution (October2021-September2023, Remote)",
+    title: "Lead Full Stack Developer · Hitachi Digital Services",
+    period: "Oct 2023 – Present",
     bullets: [
-      "Collaborated with a company specializing in product visualizations for rooms.",
-      "Executed a project for a renewable energy company.",
-      "Lead the creation of an MVP (Minimum Viable Product) for a specific product, leading a team of 2 developers.",
-      "Concentrated on mobile development, primarily encompassing version increments and updates to the mobile app.",
-      "Additionally contributed to the main project by actively participating in the refactor of the React web app to enhance product quality and performance.",
-      "Supported the team in migrating all products to an Nx-based solution.",
+      "Migrated multiple applications and backend systems to Azure, improving scalability and reliability.",
+      "Upgraded the company website to Gatsby v5 and delivered new React features with measurable performance gains.",
+      "Led rebranding and technical initiatives to improve consistency, productivity, and delivery quality.",
     ],
   },
   {
-    jobTitle:
-      "Fullstack Developer at PortoEditora (January2020-September2021, Porto,Portugal)",
+    title: "Guest Lecturer · Escola Superior de Tecnologia e Gestão de Felgueiras",
+    period: "Sep 2023 – Present",
     bullets: [
-      "Engineered apps for EscolaVirtual and orchestrated the overhaul of the administration platform.",
-      "Orchestrated a team of 3 members to architect a platform for the management of Escola Virtual (evAdmin).",
-      "Oversaw node development as a core responsibility, crafted React solutions including a chat system, and constructed two administrative platforms.",
-      "Instituted code reviews for all React projects within the team.",
+      "Lectured on Graphical Interface Conception and Operating Systems Fundamentals.",
+      "Taught Databases and mentored student internships with practical industry guidance.",
     ],
   },
   {
-    jobTitle:
-      "Fullstack Developer (September2018-December2019, Lousada,Portugal)",
+    title: "Full Stack Developer · Runtime Revolution",
+    period: "Oct 2021 – Oct 2023",
     bullets: [
-      "Conceptualized and crafted an app from inception to the final version.",
-      "Constructed an app for locating specific wines in nearby restaurants or wine cellars, employing Android and Swift for mobile development, React for the admin page, and Node.js for backend functionality.",
-      "Designed and implemented the database using MongoDB.",
+      "Delivered product visualization features and a high-impact renewable energy project.",
+      "Led MVP development, mobile app improvements, and Nx migration for streamlined workflows.",
+    ],
+  },
+  {
+    title: "Full Stack Developer · Porto Editora",
+    period: "Jan 2020 – Sep 2021",
+    bullets: [
+      "Built and evolved Escola Virtual products and core administration platforms.",
+      "Led a team of three developers, improved code quality through reviews, and shipped scalable backend features.",
     ],
   },
 ];
 
 const CareerSection = () => {
   return (
-    <section id="career">
-      <h2 className="text-4xl font-bold text-white mb-4">Career</h2>{" "}
-      <Carousel
-        className="h-[500px] rounded-full w-full px-2 text-white"
-        slideInterval={5000}
-      >
-        {JobDetails.map((job) => (
-          <div key={job.jobTitle} className="w-[90%]">
-            <JobDetail jobTitle={job.jobTitle} bullets={job.bullets} />
-          </div>
+    <section id="career" className="py-14" aria-labelledby="career-title">
+      <h2 id="career-title" className="text-4xl font-bold text-white mb-10">
+        Career
+      </h2>
+      <ol className="relative border-s border-slate-700 space-y-10 pl-6">
+        {jobDetails.map((job) => (
+          <li key={job.title} className="text-white">
+            <span className="absolute -left-[9px] mt-2 h-4 w-4 rounded-full bg-primary-500" />
+            <div className="bg-[#171717] border border-slate-800 rounded-xl p-5 md:p-6">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-3">
+                <h3 className="text-xl font-semibold">{job.title}</h3>
+                <p className="text-sm text-primary-300 font-medium">{job.period}</p>
+              </div>
+              <ul className="list-disc pl-5 text-[#ADB7BE] space-y-2">
+                {job.bullets.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            </div>
+          </li>
         ))}
-      </Carousel>
+      </ol>
     </section>
   );
 };

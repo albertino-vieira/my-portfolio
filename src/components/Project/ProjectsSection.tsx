@@ -9,68 +9,22 @@ const Tags = ["All", "Web", "Mobile"];
 const projectsData = [
   {
     id: 1,
-    title: "Nextjs Dashbpard",
-    description: "Next js basic dashboard example",
+    title: "Next.js Dashboard",
+    description: "Admin dashboard with authentication, analytics, and responsive UI.",
     image: Dashboard,
     tag: ["All", "Web"],
     gitUrl: "https://github.com/albertino-vieira/nextjs-dashboard",
-    previewUrl: "https://nextjs-dashboard-lyart-pi-47.vercel.app/"
+    previewUrl: "https://nextjs-dashboard-lyart-pi-47.vercel.app/",
   },
   {
     id: 2,
-    title: "Coming Soon",
-    description: "Project coming soon",
+    title: "New Case Study Coming Soon",
+    description: "Currently preparing a detailed case study from a recent enterprise project.",
     image: under,
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
-  /*
-  {
-    id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },*/
 ];
 
 const ProjectsSection = () => {
@@ -93,10 +47,13 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" className="text-center text-4xl font-bold text-white mt-4 mb-4 md:mb-6">
+        Featured Projects
       </h2>
+      <p className="text-center text-[#ADB7BE] max-w-2xl mx-auto mb-8">
+        A selection of web and mobile work focused on performance, usability, and business outcomes.
+      </p>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         {Tags.map((element) => (
           <ProjectTag
@@ -107,17 +64,16 @@ const ProjectsSection = () => {
           />
         ))}
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
+            key={project.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
+            transition={{ duration: 0.3, delay: index * 0.2 }}
           >
             <ProjectCard
-              key={project.id}
               title={project.title}
               description={project.description}
               imgUrl={project.image}
