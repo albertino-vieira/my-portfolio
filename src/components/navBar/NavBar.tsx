@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <nav className="fixed top-0 right-0 left-0 z-20 px-4 md:px-6 pt-4" aria-label="Main navigation">
-      <div className="max-w-6xl mx-auto rounded-2xl border border-slate-800/90 bg-[#121212]/90 backdrop-blur-md shadow-lg shadow-black/30">
+      <div className="max-w-8xl mx-auto rounded-2xl border border-slate-800/90 bg-[#121212]/90 backdrop-blur-md shadow-lg shadow-black/30">
         <div className="flex items-center justify-between px-4 md:px-6 py-3">
           <a
             href="/"
