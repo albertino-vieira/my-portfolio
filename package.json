@@ -1,7 +1,7 @@
 {
   "name": "my-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "24.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -41,5 +41,8 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vitest": "^0.34.4"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }
