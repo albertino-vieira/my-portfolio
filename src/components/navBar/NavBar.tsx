@@ -6,6 +6,10 @@ import Logo from "../../assets/logo.png";
 
 const navLinks = [
   {
+    href: "#home",
+    title: "Home",
+  },
+  {
     href: "#about",
     title: "About",
   },
@@ -21,18 +25,17 @@ const navLinks = [
     href: "#contact",
     title: "Contact",
   },
-
 ];
 
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 right-0 left-0 z-10 bg-[#121212] md:bg-opacity-90">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-12 py-4">
-        <a href={"/"} className="text-2xl md:text-5xl text-white font-semibold">
+    <nav className="fixed top-0 right-0 left-0 z-10 bg-[#121212]/90 backdrop-blur" aria-label="Main navigation">
+      <div className="flex flex-wrap items-center justify-between mx-auto px-12 py-4 border-b border-slate-800/80">
+        <a href="/" className="text-2xl md:text-5xl text-white font-semibold" aria-label="Albertino Vieira homepage">
           <div className="w-45 h-[24px]">
-            <img src={Logo} alt="logo" className="h-[44px]" />{" "}
+            <img src={Logo} alt="logo" className="h-[44px]" />
           </div>
         </a>
         <div className="mobile-menu block md:hidden">
@@ -40,6 +43,7 @@ const NavBar = () => {
             <button
               onClick={() => setNavbarOpen(false)}
               className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              aria-label="Close menu"
             >
               <XMarkIcon className="w-5 h-5" />
             </button>
@@ -47,6 +51,7 @@ const NavBar = () => {
             <button
               onClick={() => setNavbarOpen(true)}
               className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              aria-label="Open menu"
             >
               <Bars3Icon className="w-5 h-5" />
             </button>
