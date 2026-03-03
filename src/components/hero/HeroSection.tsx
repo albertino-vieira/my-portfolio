@@ -11,11 +11,12 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-8 text-center sm:text-left"
+          className="sm:col-span-8 text-center sm:text-left"
         >
           <p className="text-primary-300 font-semibold tracking-wide uppercase mb-3">
             Lead Full Stack Developer
           </p>
+
           <h1
             id="hero-title"
             className="text-white w-full mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-tight font-extrabold"
@@ -26,6 +27,7 @@ const HeroSection = () => {
             <br />
             Albertino Vieira
           </h1>
+
           <div className="text-[#ADB7BE] mb-6 text-lg lg:text-xl min-h-[36px]">
             <TypeAnimation
               sequence={[
@@ -41,11 +43,13 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </div>
-          <p className="text-[#ADB7BE] mb-8 max-w-2xl">
+
+          <p className="text-[#ADB7BE] mb-8 max-w-2xl mx-auto sm:mx-0">
             Full Stack Developer focused on performance, product quality, and
             technical leadership. I help teams deliver modern, reliable
             applications from MVP to enterprise-scale platforms.
           </p>
+
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               href="#contact"
@@ -61,6 +65,7 @@ const HeroSection = () => {
               Download CV
             </a>
           </div>
+
           <ul className="grid grid-cols-3 gap-4 mt-10 text-left">
             <li className="bg-[#1A1A1A] rounded-xl p-4 border border-slate-800">
               <p className="text-2xl font-bold text-white">7+</p>
@@ -72,7 +77,9 @@ const HeroSection = () => {
             </li>
             <li className="bg-[#1A1A1A] rounded-xl p-4 border border-slate-800">
               <p className="text-2xl font-bold text-white">2</p>
-              <p className="text-sm text-slate-400">University Courses Taught</p>
+              <p className="text-sm text-slate-400">
+                University Courses Taught
+              </p>
             </li>
           </ul>
         </motion.div>
@@ -81,15 +88,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center"
+          className="sm:col-span-4 flex justify-center sm:justify-end"
         >
-          <div className="relative w-[260px] h-[260px] lg:w-[360px] lg:h-[360px] mx-auto bg-gradient-to-br from-primary-900/40 to-secondary-900/40 rounded-full border border-slate-800 shadow-2xl shadow-primary-900/20">
+          <div className="relative mx-auto sm:mx-0 w-[260px] h-[260px] lg:w-[360px] lg:h-[360px] bg-gradient-to-br from-primary-900/40 to-secondary-900/40 rounded-full border border-slate-800 shadow-2xl shadow-primary-900/20">
             <img
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full w-[85%] h-[85%] object-cover"
               alt="Albertino Vieira portrait"
               src={AV}
-              width={300}
-              height={300}
             />
           </div>
         </motion.div>
